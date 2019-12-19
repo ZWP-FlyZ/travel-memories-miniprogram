@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-row":"../../iview/row/index",
+    "i-col": "../../iview/col/index",
+    "i-icon": "../../iview/icon/index",
+    "i-button": "../../iview/button/index",
+    "mp-searchbar":"../../weui/searchbar/searchbar"    
+  }
+}
