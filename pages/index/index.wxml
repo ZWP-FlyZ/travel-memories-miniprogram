@@ -1,16 +1,18 @@
 <!--pages/index/index.wxml-->
 
 <view class="app-container">
-  <view class="map-container">
+  <view class="map-container" 
+      style="height:{{showBottomView?'30vh':'100vh'}};">
     <map 
         id="myMap"
         class="map" 
         setting="{{mapSetting}}"
         show-location="true"
         bindregionchange="onMapRegionChange"
+        bindtap="onMapTap"
         >
     </map>
-    <view class="top-in-container">
+    <view class="top-in-container" hidden='{{showBottomView}}'>
         <view class="top-row-container">
           <i-row>
             <i-col span="3">
@@ -20,8 +22,6 @@
             </i-col>
             <i-col span="21">
               <view class="top-input-container">
-                <!-- <input class="top-input-search" 
-                  value="123123" type="text" confirm-type="search"/> -->
                 <mp-searchbar
                     ext-class="top-input-search2" 
                     class="top-input-search" 
@@ -34,7 +34,7 @@
         </view>
     </view>
 
-    <view class="bttom-right-in-container">
+    <view class="bttom-right-in-container" hidden='{{showBottomView}}'>
       <block >
         <button size="mini" bindtap="onMapScaleUp">
           <view class="btn-scale-btn-container">
@@ -50,7 +50,7 @@
     </view>
 
 
-    <view class="bttom-left-in-container">
+    <view class="bttom-left-in-container" hidden='{{showBottomView}}'>
         <button  size="mini" class="btn-location"
         bindtap="onLocationClick"
         >
@@ -61,9 +61,33 @@
         </button>
     </view>
   </view>
-  <block wx:if="{{false}}" class="bottom-out-container">
-    <text>hhhhhh</text>
-  </block>
+
+  <view hidden='{{!showBottomView}}' 
+        class="bottom-out-container"
+        style="height:{{showBottomView?'70vh':'0vh'}};">
+        <view class="bottom-out-container-input">
+          <i-panel title="编辑事件点信息" hide-top="{{false}}">
+            <i-input value="{{ value3 }}" title="标题" placeholder="请输入事件点标题" maxlength="50" />
+            <i-input value="{{ value3 }}" title="地址" placeholder="请输入事件点地址标题(最多50字)" maxlength="50" />
+            <i-input value="123" title="经度" disabled/>
+            <i-input value="66" title="纬度"  disabled/>
+            <picker mode="time" value="12:22" start="09:01" end="21:01" >选择时间</picker>
+          </i-panel>
+        </view>
+        <view class="bottom-out-container-btn">
+          <button bindtap="onCancelAddEpointTap">
+            提 交
+          </button>
+          <button bindtap="onCancelAddEpointTap">
+            取 消
+          </button>          
+        </view>
+
+    <!-- <text>hhhhhh</text>
+    <button bindtap="onCancelAddEpointTap">
+      返回
+    </button> -->
+  </view>
 </view>
 
 

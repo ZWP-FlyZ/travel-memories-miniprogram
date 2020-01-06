@@ -4,6 +4,9 @@
     "i-col": "../../iview/col/index",
     "i-icon": "../../iview/icon/index",
     "i-button": "../../iview/button/index",
-    "mp-searchbar":"../../weui/searchbar/searchbar"    
+    "i-panel": "../../iview/panel/index",
+    "i-input": "../../iview/input/index",    
+    "mp-searchbar":"../../weui/searchbar/searchbar"
+
   }
 }

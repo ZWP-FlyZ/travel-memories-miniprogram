@@ -6,6 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+
+    // 显示底部视图
+    showBottomView:true,
+
+    // 地图状态
     mapSetting:{
       scale: 16, 
       longitude: 116.3970565796,
@@ -99,6 +104,25 @@ Page({
     })
     
   },
+
+  onMapTap:function(e){
+    console.debug(e);
+    this.setData({
+      mapSetting: {
+        longitude: e.detail.longitude,
+        latitude: e.detail.latitude
+      },
+      showBottomView:true
+    })
+  },
+
+  // 取消添加事件点
+  onCancelAddEpointTap:function(e){
+    this.setData({
+      showBottomView: false
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面加载
