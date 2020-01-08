@@ -144,16 +144,68 @@
   /* background-color: rgba(0, 255, 0, 0.3); */
 }
 
-.bottom-out-container-input{
+.bottom-out-container-editer{
   width: 100vw;
   height: 80%;
-  background-color: rgba(19, 182, 204, 0.3);
+  background-color: rgba(245, 245, 245, 0.3);
 }
 
-.bottom-out-container-input-location{
-  width: 50vw;
-  background-color: rgba(19, 182, 204, 0.3);
+
+.aline{
+  width: 95%;
+  background-color:rgba(128, 128, 128, 0.411);
+  height: 1px;
 }
+
+.editer-container{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  width: 100vw;
+  /* justify-content:center; */
+
+}
+
+.editer-row{
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  flex-direction:row;
+  /* border-bottom: 1px solid black; */
+  /* background-color: rgba(230, 230, 24, 0.986); */
+}
+
+.editer-title{
+  width: 20%;
+  height: 100%;
+  /* background-color: rgb(3, 3, 0 , 0.3); */
+}
+
+.editer-title-text{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.editer-item{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  /* background-color: rgba(236, 12, 169, 0.3); */
+}
+
+.editer-item-input{
+  width: 100%;
+  height: 100%;
+  
+  /* background-color: rgba(236, 12, 169, 0.3); */
+}
+
+
 
 
 .bottom-out-container-btn{
